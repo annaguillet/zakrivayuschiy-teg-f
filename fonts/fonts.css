@@ -11,10 +11,10 @@
 @font-face {
   font-display: swap;
   font-family: 'Inter';
-  src: url('../fonts/Inter-VariableFont.woff2') format('woff2 supports variations'),
+  src: url('../fonts/Inter-VariableFont.woff2') format('woff2-variations'),
        url('../fonts/Inter-Variable.woff') format('woff-variations');
-  font-weight: 400 700; 
-  font-style: normal;
+       font-weight: 100 900; 
+       font-style: normal;
 }
 
 

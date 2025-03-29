@@ -211,8 +211,7 @@ img {
   transform: scaleX(1);
 }
 
-.card__like-button:hover .button__text,
-.card__like-button:hover .floppy {
+.card__like-button:hover .button__text {
   color: var(--hover-text-color);
   fill: var(--hover-text-color);
 }
@@ -358,7 +357,6 @@ img {
   padding: 0;
   font-family: var(--font-accent);
   font-size: clamp(0.0625rem, 0.0603rem + 3.4759vw, 0.875rem);
-  background-color: transparent;
   background-color: var(--background-color_button);
   cursor: pointer;
 }
@@ -390,17 +388,11 @@ img {
   color: var(--transition-text-color);
   fill: white;
   transition: color 0.25s ease-in-out, fill 0.25s ease-in-out;
+  line-height: 90%;
 }
 
 .button-save:hover::before {
   transform: scaleX(1);
-}
-
-.button-save:hover .button__text,
-.button-save:hover .floppy {
-  color: var(--hover-text-color);
-  fill: white;
-  line-height: 90%;
 }
 
 .floppy {
