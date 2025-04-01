@@ -1,14 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --font-primary: "Inter", sans-serif;
-  --font-accent: "PressStart2P", monospace;
+  --font-primary: 'Inter-Variable', sans-serif;
+  --font-accent: 'PressStart2P', fantasy;
   --text-weight: 400;
-  --title-weight: 700;
+  --wght-title: 700;
   --text-container-max-width: 696px;
   --color-primary: #000;
   --text-color: #000;
   --hover-text-color: white;
-  --transition-text-color: gray;
   --header-section-max-width: 700px;
   --header-section-min-width: 375px;
   --header-section-min-height: 327px;

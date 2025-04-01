@@ -1,1 +1,1 @@
-https://github.com/annaguillet/zakrivayuschiy-teg-f
+https://annaguillet.github.io/zakrivayuschiy-teg-f/
