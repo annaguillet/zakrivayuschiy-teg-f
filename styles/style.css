@@ -111,8 +111,8 @@ img {
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
     text-shadow: none; 
+   }
   }
-}
 
 .content-text {
   margin: 24px 30px auto 25px;
@@ -148,7 +148,7 @@ img {
   outline: none;
   background-color: transparent;
   cursor: pointer;
-  transition: 3s ease; 
+  transition: 3s ease;
 }
 
 .card__like-button {
