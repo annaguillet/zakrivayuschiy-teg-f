@@ -101,36 +101,26 @@ img {
   color: transparent;
   font-family: var(--font-accent), monospace;
   font-size: 14px;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 1px;
   mix-blend-mode: hard-light;
   -webkit-text-stroke: 1px #fff;
 }
 
 @supports (-webkit-text-stroke: 1px white) or (text-stroke: 1px white) {
-  .your-class {
+  .card__watermark {
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
-    text-shadow: none; /* Отключаем фоллбэк */
-  }
-}
-
-@supports not (-webkit-text-stroke: 1px white) {
-  .your-class {
-    text-shadow:
-      -1px -1px 0 #fff,
-      1px -1px 0 #fff,
-      -1px 1px 0 #fff,
-      1px 1px 0 #fff; /* Имитация обводки */
+    text-shadow: none; 
   }
 }
 
 .content-text {
-  margin: 24px 25px auto 25px;
+  margin: 24px 30px auto 25px;
 }
 
 .content-text-paragraph {
   font-weight: 400;
-  font-size: clamp(0.0625rem, 0.0597rem + 4.5455vw, 1.125rem);
+  font-size: 18px;
   font-style: normal;
   line-height: 117%;
 }
@@ -158,6 +148,7 @@ img {
   outline: none;
   background-color: transparent;
   cursor: pointer;
+  transition: 3s ease; 
 }
 
 .card__like-button {
@@ -173,6 +164,7 @@ img {
   overflow: hidden;
   background-color: transparent;
   cursor: pointer;
+  
 }
 
 .card__like-button:focus-visible {
@@ -182,15 +174,6 @@ img {
 
 .card__icon-button:focus-visible .like-icon {
   outline: 2px solid var(--contour);
-  transition: 3s ease;
-}
-
-.core,
-.main-body {
-  fill: transparent;
-  transition-duration: 0.3s;
-  transition-property: fill;
-  transition-timing-function: ease;
 }
 
 .like-icon {
@@ -327,6 +310,7 @@ dialog::backdrop {
 
   .card__watermark {
     font-size: clamp(0.0625rem, 0.0603rem + 3.4759vw, 0.875rem);
+    padding-top: 11px;
   }
 
   .title {
@@ -337,8 +321,8 @@ dialog::backdrop {
     font-size: clamp(0.0625rem, 0.0603rem + 3.4759vw, 0.875rem);
   }
 
-  .content-text-paragraph-big {
-    padding-bottom: 0px;
+  .card-title {
+    padding: 5px 5px 5px 12px;
   }
 
   .button-save {
@@ -349,12 +333,7 @@ dialog::backdrop {
     gap: 8px;
     width: 306px;
     height: 84px;
-    margin: 0 auto;
-  }
-
-  .floppy {
-    width: 28px;
-    height: 28px;
+    margin: 0 auto 100px auto;
   }
 
   .dialog[open] {

@@ -10,35 +10,74 @@
 
 */
 
-.card__like-button::before {
+.card__like-button {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 38px;
+  border: solid 2px #000;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out, fill 0.25s ease-in-out;
+  z-index: 0;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+ 
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
-  background-color: #000;
+  background-color: var(--color-primary);
+  fill: var(--color-primary);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
+
 }
 
-.card__like-button:hover::before {
+.card__like-button:hover::before,
+.button-save:hover::before,
+.card__icon-button:hover + .card__like-button::before {
   transform: scaleX(1);
 }
 
-.card__like-button:hover {
+.card__like-button:hover,
+.button-save:hover,
+.card__icon-button:hover + .card__like-button {
   color: var(--transition-text-color);
   fill: var(--transition-text-color);
-  transition: color 0.25s ease-in-out, fill 0.25s ease-in-out;
 }
 
-.card__like-button:hover .button__text::before {
-  transform: scaleX(1);
-}
-
-.card__like-button:hover .button__text {
+.card__like-button:hover .button__text,
+.button-save:hover .button__text,
+.button-save:hover .floppy,
+.card__icon-button:hover + .card__like-button .button__text {
   color: var(--hover-text-color);
   fill: var(--hover-text-color);
+  line-height: 90%;
 }
+
+.core,
+.main-body {
+  fill: transparent;
+  transition-duration: 0.3s;
+  transition-property: fill;
+  transition-timing-function: ease;
+}
+
 
 .like-button:hover .core {
   fill: currentColor;
@@ -123,21 +162,9 @@
   }
 }
 
-.button-save .button__text,
 .button-save .floppy {
   position: relative;
   z-index: 1;
-}
-
-.button-save::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-color: var(--color-primary);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
 }
 
 .button-save:hover .button__text,
@@ -146,8 +173,4 @@
   fill: var(--hover-text-color);
   line-height: 90%;
   transition: color 0.5s ease-in-out, fill 0.5s ease-in-out;
-}
-
-.button-save:hover::before {
-  transform: scaleX(1);
 }
