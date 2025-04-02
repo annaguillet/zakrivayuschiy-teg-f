@@ -25,12 +25,8 @@
   z-index: 0;
 }
 
-.button:hover::before {
-  transform: scaleX(1);
- 
-}
-
-.button__text {
+.button__text,
+.button-save .floppy {
   position: relative;
   z-index: 1;
 }
@@ -44,29 +40,18 @@
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
-
 }
 
-.card__like-button:hover::before,
-.button-save:hover::before,
-.card__icon-button:hover + .card__like-button::before {
+.button:hover::before,
+button:hover + button::before {
   transform: scaleX(1);
 }
 
-.card__like-button:hover,
-.button-save:hover,
-.card__icon-button:hover + .card__like-button {
-  color: var(--transition-text-color);
-  fill: var(--transition-text-color);
-}
-
-.card__like-button:hover .button__text,
-.button-save:hover .button__text,
+.button:hover .button__text,
 .button-save:hover .floppy,
-.card__icon-button:hover + .card__like-button .button__text {
+button:hover + button .button__text {
   color: var(--hover-text-color);
   fill: var(--hover-text-color);
-  line-height: 90%;
 }
 
 .core,
@@ -78,12 +63,12 @@
 }
 
 
-.like-button:hover .core {
+.card__icon-button:hover .core {
   fill: currentColor;
   transition-delay: 0s;
 }
 
-.like-button:hover .main-body {
+.card__icon-button:hover .main-body {
   fill: currentColor;
   transition-delay: 0.05s;
 }
@@ -161,15 +146,5 @@
   }
 }
 
-.button-save .floppy {
-  position: relative;
-  z-index: 1;
-}
 
-.button-save:hover .button__text,
-.button-save:hover .floppy {
-  color: var(--hover-text-color);
-  fill: var(--hover-text-color);
-  line-height: 90%;
-  transition: color 0.5s ease-in-out, fill 0.5s ease-in-out;
-}
+
