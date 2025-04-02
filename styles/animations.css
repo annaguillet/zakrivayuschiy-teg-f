@@ -23,12 +23,15 @@
   cursor: pointer;
   transition: color 0.25s ease-in-out, fill 0.25s ease-in-out;
   z-index: 0;
+  background-color: #fff;
 }
 
 .button__text,
 .button-save .floppy {
   position: relative;
   z-index: 1;
+  color: white;
+  mix-blend-mode: difference;
 }
 
 .button::before {
@@ -45,13 +48,6 @@
 .button:hover::before,
 button:hover + button::before {
   transform: scaleX(1);
-}
-
-.button:hover .button__text,
-.button-save:hover .floppy,
-button:hover + button .button__text {
-  color: var(--hover-text-color);
-  fill: var(--hover-text-color);
 }
 
 .core,
