@@ -21,16 +21,16 @@
   outline: none;
   overflow: hidden;
   cursor: pointer;
-  transition: color 0.25s ease-in-out, fill 0.25s ease-in-out;
+  transition: color 0.3s ease, fill 0.3s ease;
   z-index: 0;
-  background-color: #fff;
+  background-color: var(--hover-text-color);
 }
 
 .button__text,
 .button-save .floppy {
   position: relative;
   z-index: 1;
-  color: white;
+  color: var(--hover-text-color);
   mix-blend-mode: difference;
 }
 
@@ -64,6 +64,11 @@ button:hover + button::before {
   transition-delay: 0s;
 }
 
+.card__icon-button:hover .contour {
+  fill: currentColor;
+  transition-delay: 0.05s;
+}
+
 .card__icon-button:hover .main-body {
   fill: currentColor;
   transition-delay: 0.05s;
@@ -81,12 +86,17 @@ button:hover + button::before {
   opacity: 0;
 }
 
-.like-button:active .core {
+.card__icon-button:active .core {
   fill: var(--active-heart-color);
   transition-delay: 0s;
 }
 
-.like-button:active .main-body {
+.card__icon-button:active .main-body {
+  fill: var(--active-heart-color);
+  transition-delay: 0.03s;
+}
+
+.card__icon-button:active .contour {
   fill: var(--active-heart-color);
   transition-delay: 0.05s;
 }

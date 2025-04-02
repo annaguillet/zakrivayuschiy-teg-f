@@ -82,8 +82,8 @@
 }
 
 img {
-  width: clamp(var(--img-min-height), 100%, var(--img-max-height));
-  height: clamp(var(--img-min-height), 100%, var(--img-max-height));
+ width: 100%;
+  height: 100%;
   outline: solid 2px #000;
 }
 
@@ -103,7 +103,6 @@ img {
   font-size: 14px;
   text-shadow: 0 1px 1px;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px #fff;
 }
 
 @supports (-webkit-text-stroke: 1px white) or (text-stroke: 1px white) {
@@ -172,7 +171,7 @@ img {
   outline: none;
 }
 
-.card__icon-button:focus-visible .like-icon {
+.card__icon-button:focus-visible {
   outline: 2px solid var(--contour);
 }
 
@@ -182,7 +181,6 @@ img {
   height: 34px;
   outline: 2px solid transparent;
   background-size: contain;
-  transition: transform 0.3s, background 0.3s;
 }
 
 .card_image_brightness {
@@ -334,6 +332,11 @@ dialog::backdrop {
     width: 306px;
     height: 84px;
     margin: 0 auto 100px auto;
+  }
+
+  .floppy {
+    width: 28px;
+    height: 28px;
   }
 
   .dialog[open] {
