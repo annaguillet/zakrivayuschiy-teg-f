@@ -135,7 +135,7 @@ img {
   align-items: center;
   max-width: 100%;
   margin: 23px 23px 0 auto;
-  padding: 0 0 23px 0;
+  padding: 0 0 27px 0;
   font-family: var(--font-accent), monospace;
   font-size: clamp(0.0625rem, 0.0603rem + 3.4759vw, 0.875rem);
   line-height: 90%;
@@ -158,21 +158,11 @@ img {
   align-items: center;
   width: 130px;
   height: 38px;
-  border: solid 2px #000;
   outline: none;
   overflow: hidden;
   background-color: transparent;
   cursor: pointer;
   
-}
-
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0px var(--color-shadow);
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  outline: 2px solid var(--contour);
 }
 
 .like-icon {
@@ -183,8 +173,12 @@ img {
   background-size: contain;
 }
 
+.card__icon-button:focus-visible .like-icon {
+  outline: 2px solid black;
+}
+
 .card_image_brightness {
-  filter: sepia(60%) contrast(120%) brightness(90%);
+  filter: sepia(60%) contrast(120%) brightness(120%);
 }
 
 .card_image_contrast {
@@ -192,7 +186,7 @@ img {
 }
 
 .card_image_grayscale {
-  filter: grayscale(0.8) brightness(0.8);
+  filter: grayscale(0.8) brightness(1.5);
 }
 
 .card_image_blur {
@@ -204,7 +198,7 @@ img {
 }
 
 .card_image_contrast-grayscale {
-  filter: invert(100%) grayscale(100%) brightness(150%) contrast(200%);
+  filter: invert(80%) grayscale(90%) brightness(110%) contrast(200%);
 }
 
 .card_image_grayscale-blur {
@@ -212,7 +206,7 @@ img {
 }
 
 .card_image_hue-rotate {
-  filter: contrast(120%) grayscale(30%) brightness(90%);
+  filter: contrast(120%) grayscale(30%);
 }
 
 .button-save {
@@ -300,6 +294,10 @@ dialog::backdrop {
 
   .text-container {
     padding-block: 120px;
+  }
+
+  .content-text {
+    margin: 19px 30px auto 25px;
   }
 
   img {
